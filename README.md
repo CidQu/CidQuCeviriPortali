@@ -1,6 +1,8 @@
 # CidQuCeviriPortali
 CidQu Çeviri Portalı Açık Kaynak Kodları
 
+Website: https://cidqu.net/ceviri/#/
+
 Eğitim ve bulut üzerinde saklama amacıyla oluşturulmuştur.
 
 Kaynak verilerek kullanılabilir.

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:universal_html/html.dart' as html;
 
 void main() {
   runApp(const MyApp());
@@ -9,30 +10,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'CidQu BETA',
       theme: _buildShrineTheme(),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.0'),
+      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.1'),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
@@ -40,10 +30,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final Uri cidqu = Uri.parse('https://cidqu.net/contactus.html');
+  final Uri cidqu = Uri.parse('https://cidqu.net');
+  final Uri github = Uri.parse('https://github.com/CidQu');
+  final Uri dh = Uri.parse('https://forum.donanimhaber.com/profil/2930330');
+
+  @override
+  void initState() {
+    
+    super.initState();
+  }
 
   void _launchUrl() async {
     if (!await launchUrl(cidqu)) throw 'cidqu sunucularına bağlanılamadı';
+  }
+
+  void gitHub() async {
+    if (!await launchUrl(github)) throw 'github sunucularına bağlanılamadı';
+  }
+
+  void dH() async {
+    if (!await launchUrl(dh)) throw 'donanımhaber sunucularına bağlanılamadı';
   }
 
   void _Indirme(url) async {
@@ -120,19 +126,23 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Yavuz Selimhan (CidQu) (Çevirmen - Proje Sahibi - Tester)
+                        '''Yavuz Selimhan (CidQu) (Çevirmen - Proje Sahibi - Tester)
 Outsider One (Yardımcı)
 InfGo (Çevirmen - Tester)
 Tohunder (Çevirmen)
 Dante (Çevirmen)
-                          ''', textAlign: TextAlign.center,),
-                      SizedBox(height: 10,),
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Emeği Geçenler:',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Amr Shaheen (Altyazı Dosyaları) (Anonim)          
+                        '''Amr Shaheen (Altyazı Dosyaları) (Anonim)          
 h3x3r (Font/Dosya Çıkartma) (Zenhax)
 ISKA (Font) (DonanımHaber)
 by-freon (Font) (Zenhax)
@@ -141,7 +151,9 @@ folkemon (Font) (Zenhax)
 Thierry Lathuille (Oyuna Aktarma) (Stack Overflow)
 lostprophet.hu (Tester, Yardımcı, .decl) (Website)
 Melisa Bahadir (Çevirmen)
-                          ''', textAlign: TextAlign.center,),
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                   ),
                 ),
@@ -173,17 +185,23 @@ Melisa Bahadir (Çevirmen)
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Yavuz Selimhan (CidQu) (Çevirmen, Tester, Proje Lideri)
+                        '''Yavuz Selimhan (CidQu) (Çevirmen, Tester, Proje Lideri)
 InfGo (Çevirmen, Tester, Yardımcı)
-                          ''', textAlign: TextAlign.center,),
-                      SizedBox(height: 10,),
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Yama Toolu:',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''gameside (ZenHax)
-                          ''', textAlign: TextAlign.center,),
+                        '''gameside (ZenHax)
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                   ),
                 ),
@@ -215,19 +233,25 @@ InfGo (Çevirmen, Tester, Yardımcı)
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Yavuz Selimhan (CidQu) (Çevirmen, Tester, Proje Lideri)
+                        '''Yavuz Selimhan (CidQu) (Çevirmen, Tester, Proje Lideri)
 InfGo (Çevirmen, Yardımcı)
-                          ''', textAlign: TextAlign.center,),
-                      SizedBox(height: 10,),
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Yama Toolu:',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Yavuz Selimhan (CidQu) (Dosya Çıkartma)
+                        '''Yavuz Selimhan (CidQu) (Dosya Çıkartma)
 권팡이 (Anonim)
 Akintos (GitHub) (Dosya Şifre Çözme)
-                          ''', textAlign: TextAlign.center,),
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                   ),
                 ),
@@ -262,8 +286,10 @@ Akintos (GitHub) (Dosya Şifre Çözme)
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Türkçe Karakterli sürüm çalışmaz ise oyunun .exesini Uyumluluk modundan Windows 8'e çekin. Yine çalışmaz ise Türkçe Karaktersiz sürümü kullanın.
-                          ''', textAlign: TextAlign.center,),
+                        '''Türkçe Karakterli sürüm çalışmaz ise oyunun .exesini Uyumluluk modundan Windows 8'e çekin. Yine çalışmaz ise Türkçe Karaktersiz sürümü kullanın.
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                   ),
                 ),
@@ -295,34 +321,44 @@ Akintos (GitHub) (Dosya Şifre Çözme)
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Oyuna aktarım ve kullanım sırasında hiçbir sorun bulunmamaktadır.''', textAlign: TextAlign.center,),
-                      SizedBox(height: 10,),
+                        '''Oyuna aktarım ve kullanım sırasında hiçbir sorun bulunmamaktadır.''',
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Arayüz Yüzdesi:',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''
+                        '''
 Ana Menü = %0 (Dosya Bulunamadı)
 Ayarlar = %100
 İnteraktif Tuşlar = %100
 Keşif Defteri = %100
 Killtag'ler = %100
-                          ''', textAlign: TextAlign.center,),
-                      SizedBox(height: 10,),
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Text(
                         'Oyun İçi Diyaloglar:',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''
+                        '''
 Sinematikler = %100
 NPC Diyalogları = %99+
 Ana Hikaye = %90
 Storytelling = %100
 Final Battle = %0
 Tutorials = %1
-                          ''', textAlign: TextAlign.center,),
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                   ),
                 ),
@@ -354,8 +390,10 @@ Tutorials = %1
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                          '''Oyuna aktarım ve oyun içi kullanım ile ilgili detaylar tam olarak net değil, lakin 권팡이'ın belirttiklerine göre text dosyaları başarılı bir şekilde çıkartılmış ve tarafımıza iletilecektir.
-                          ''', textAlign: TextAlign.center,),
+                        '''Oyuna aktarım ve oyun içi kullanım ile ilgili detaylar tam olarak net değil, lakin 권팡이'ın belirttiklerine göre text dosyaları başarılı bir şekilde çıkartılmış ve tarafımıza iletilecektir.
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                   ),
                 ),
@@ -394,6 +432,7 @@ Tutorials = %1
               Spacer(),
               Card(
                 child: Container(
+                    width: 500,
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -510,6 +549,7 @@ Tutorials = %1
               Spacer(),
               Card(
                 child: Container(
+                    width: 500,
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -626,6 +666,7 @@ Tutorials = %1
               Spacer(),
               Card(
                 child: Container(
+                    width: 500,
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -666,7 +707,7 @@ Tutorials = %1
                                     ),
                                     onPressed: () {},
                                   ),
-                                  SizedBox(width: 50),
+                                  SizedBox(width: 73),
                                 ]),
                             SizedBox(height: 20),
                             Row(
@@ -737,17 +778,136 @@ Tutorials = %1
             ],
           ),
           SizedBox(height: 30),
-          Text('Bu websitesi Flutter üzerinden CidQu tarafından tasarlanmıştır.'),
+          Row(
+            children: [
+              Spacer(),
+              Card(
+                child: Container(
+                    width: 500,
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Her New Memory Türkçe Yama',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  SizedBox(width: 10),
+                                  ActionChip(
+                                    backgroundColor:
+                                        Color.fromRGBO(209, 250, 229, 1),
+                                    label: Text(
+                                      'Resmi Yama',
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(6, 95, 80, 1)),
+                                    ),
+                                    onPressed: () {},
+                                  ),           
+                                  SizedBox(width: 40),
+                                ]),
+                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                TextButton(
+                                  child: Text(
+                                    'Çeviri Ekibi',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromRGBO(6, 95, 80, 1),
+                                    ),
+                                  ),
+                                  onPressed: () => {yapimcilar('aot2')},
+                                ),
+                                SizedBox(width: 10),
+                                SizedBox(width: 260),
+                              ],
+                            )
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '25 Mart 2022',
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 20),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                ElevatedButton.icon(
+                                    onPressed: () {
+                                      _Indirme('https://store.steampowered.com/app/1296770/Her_New_Memory/');
+                                    },
+                                    icon: Icon(Icons.stream, size: 18),
+                                    label: Text(
+                                      "Steam",
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                      ),
+                                    ))
+                              ],
+                            )
+                          ],
+                        )
+                      ],
+                    )),
+              ),
+              Spacer()
+            ],
+          ),
+          SizedBox(height: 10),
+          SizedBox(
+            height: 10,
+          ),
+          FloatingActionButton.extended(
+            onPressed: dH,
+            label: Text('DonanımHaber Sayfası'),
+            icon: Icon(Icons.forum),
+            backgroundColor: Color.fromRGBO(255, 252, 82, 1),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          FloatingActionButton.extended(
+            onPressed: gitHub,
+            label: Text('CidQu GitHub Sayfası'),
+            icon: Icon(Icons.code),
+            backgroundColor: Color.fromRGBO(255, 252, 82, 1),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          FloatingActionButton.extended(
+            onPressed: _launchUrl,
+            label: Text('CidQu Websitesi'),
+            icon: Icon(Icons.web),
+            backgroundColor: Color.fromRGBO(255, 252, 82, 1),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Text(
+              'Bu websitesi Flutter üzerinden CidQu tarafından tasarlanmıştır.'),
           Text('This website is powered by Flutter made by CidQu.'),
           Spacer()
         ],
       )),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _launchUrl,
-        tooltip: 'Bize Ulaşın!',
-        backgroundColor: Color.fromRGBO(255, 252, 82, 1),
-        child: const Icon(Icons.call),
-      ),
     );
   }
 }

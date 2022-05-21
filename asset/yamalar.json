@@ -1,0 +1,38 @@
+{
+    "aot2": {
+        "isim": "Attack On Titan 2",
+        "ceviridurumu": "%61.1",
+        "versiyon": "v0",
+        "ceviriekibi": "",
+        "yamahakkinda": "",
+        "direktlink": 1,
+        "link": "yok"
+    },
+    "hnm": {
+        "isim": "Her New Memory",
+        "ceviridurumu": "",
+        "versiyon": "Resmi Yama",
+        "ceviriekibi": "",
+        "yamahakkinda": "",
+        "direktlink": 1,
+        "link": "https://store.steampowered.com/app/1296770/Her_New_Memory__Hentai_Simulator/"
+    },
+    "sunset": {
+        "isim": "Sunset Overdrive",
+        "ceviridurumu": "%00.1",
+        "versiyon": "v0",
+        "ceviriekibi": "",
+        "yamahakkinda": "",
+        "direktlink": 1,
+        "link": "yok"
+    },
+    "deathloop": {
+        "isim": "Deathloop",
+        "ceviridurumu": "",
+        "versiyon": "v1.0.0",
+        "ceviriekibi": "",
+        "yamahakkinda": "",
+        "direktlink": 0,
+        "link": "deathloop"
+    }
+}

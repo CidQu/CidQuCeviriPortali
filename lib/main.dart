@@ -1,7 +1,11 @@
+import 'dart:convert';
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:universal_html/html.dart' as html;
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'CidQu BETA',
       theme: _buildShrineTheme(),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.1'),
+      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.2'),
     );
   }
 }
@@ -33,12 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final Uri cidqu = Uri.parse('https://cidqu.net');
   final Uri github = Uri.parse('https://github.com/CidQu');
   final Uri dh = Uri.parse('https://forum.donanimhaber.com/profil/2930330');
-
-  @override
-  void initState() {
-    
-    super.initState();
-  }
 
   void _launchUrl() async {
     if (!await launchUrl(cidqu)) throw 'cidqu sunucularına bağlanılamadı';
@@ -126,12 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        '''Yavuz Selimhan (CidQu) (Çevirmen - Proje Sahibi - Tester)
-Outsider One (Yardımcı)
-InfGo (Çevirmen - Tester)
-Tohunder (Çevirmen)
-Dante (Çevirmen)
-                          ''',
+                        'Yavuz Selimhan (CidQu) (Çevirmen - Proje Sahibi - Tester)\nOutsider One (Yardımcı)\nInfGo (Çevirmen - Tester)\nTohunder (Çevirmen)\nDante (Çevirmen)',
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
@@ -142,16 +135,7 @@ Dante (Çevirmen)
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        '''Amr Shaheen (Altyazı Dosyaları) (Anonim)          
-h3x3r (Font/Dosya Çıkartma) (Zenhax)
-ISKA (Font) (DonanımHaber)
-by-freon (Font) (Zenhax)
-cockafej (Font) (Zenhax)
-folkemon (Font) (Zenhax)
-Thierry Lathuille (Oyuna Aktarma) (Stack Overflow)
-lostprophet.hu (Tester, Yardımcı, .decl) (Website)
-Melisa Bahadir (Çevirmen)
-                          ''',
+                        'Amr Shaheen (Altyazı Dosyaları) (Anonim)\nh3x3r (Font/Dosya Çıkartma) (Zenhax)\nISKA (Font) (DonanımHaber)\nby-freon (Font) (Zenhax)\ncockafej (Font) (Zenhax)\nfolkemon (Font) (Zenhax)\nThierry Lathuille (Oyuna Aktarma) (Stack Overflow)\nThierry Lathuille (Oyuna Aktarma) (Stack Overflow)\nlostprophet.hu (Tester, Yardımcı, .decl) (Website)\nMelisa Bahadir (Çevirmen)',
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -249,6 +233,43 @@ InfGo (Çevirmen, Yardımcı)
                         '''Yavuz Selimhan (CidQu) (Dosya Çıkartma)
 권팡이 (Anonim)
 Akintos (GitHub) (Dosya Şifre Çözme)
+                          ''',
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+                actions: [
+                  ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text(
+                        "Tamam",
+                        style: TextStyle(
+                          fontSize: 15,
+                        ),
+                      ))
+                ],
+              ));
+    }
+    if (oyunismi == 'hnm') {
+      showDialog<String>(
+          context: context,
+          builder: (BuildContext context) => AlertDialog(
+                title: Text('Her New Memory'),
+                content: Container(
+                  height: MediaQuery.of(context).size.height / 6.5,
+                  child: Column(
+                    children: [
+                      Text(
+                        'Proje Ekibi:',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        '''Yavuz Selimhan (CidQu) (Çevirmen, Tester, Proje Lideri)
+InfGo (Çevirmen)
+Splasi (Çevirmen)
                           ''',
                         textAlign: TextAlign.center,
                       ),
@@ -413,7 +434,6 @@ Tutorials = %1
     }
   }
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -423,7 +443,7 @@ Tutorials = %1
         ),
         backgroundColor: Color.fromRGBO(255, 252, 82, 1),
       ),
-      body: Center(
+      body: MediaQuery.of(context).size.width >= 990 && MediaQuery.of(context).size.height >= 800 ? Center(
           child: Column(
         children: [
           Spacer(),
@@ -455,7 +475,7 @@ Tutorials = %1
                                     backgroundColor:
                                         Color.fromRGBO(209, 250, 229, 1),
                                     label: Text(
-                                      'v1.0.0',
+                                      '1.0.0',
                                       style: TextStyle(
                                           color: Color.fromRGBO(6, 95, 80, 1)),
                                     ),
@@ -583,7 +603,7 @@ Tutorials = %1
                                     backgroundColor:
                                         Color.fromRGBO(254, 243, 199, 1),
                                     label: Text(
-                                      '%62.2',
+                                      '%99.9+',
                                       style: TextStyle(
                                           color:
                                               Color.fromRGBO(209, 155, 86, 1)),
@@ -827,7 +847,7 @@ Tutorials = %1
                                       color: Color.fromRGBO(6, 95, 80, 1),
                                     ),
                                   ),
-                                  onPressed: () => {yapimcilar('aot2')},
+                                  onPressed: () => {yapimcilar('hnm')},
                                 ),
                                 SizedBox(width: 10),
                                 SizedBox(width: 260),
@@ -907,10 +927,12 @@ Tutorials = %1
           Text('This website is powered by Flutter made by CidQu.'),
           Spacer()
         ],
-      )),
+      )) : Center(
+        child: Text('Bu websitesine sadece Bilgisayar üzerinden erisilebilir. Minimum çözünürlük 990x800dür. Bilgisayar üzerindeyseniz tam ekrana alip deneyebilirsiniz.', style: TextStyle(fontSize: 20, fontFamily: 'ITC'),),
+      ),
     );
-  }
-}
+  }}
+
 
 ThemeData _buildShrineTheme() {
   final ThemeData base = ThemeData.light();

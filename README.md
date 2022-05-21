@@ -3,8 +3,10 @@ CidQu Çeviri Portalı Açık Kaynak Kodları
 
 Website: https://cidqu.net/ceviri/#/
 
-Eğitim ve bulut üzerinde saklama amacıyla oluşturulmuştur.
+0.8.2 ile eklenenler:
 
-Kaynak verilerek kullanılabilir.
-
-Sitede herhangi bir hata bulursanız pull request atmayı unutmayın.
+- Her New Memory oyunu eklendi.
+- Mobil arayüzde çalışma özelliği kaldırıldı, sebebi ise daha düzenlenmemiş bir arayüze sahip olması.
+- Giriş ekranına yükleme ikonu eklendi.
+- Üç yeni tuş eklendi, bu tuşlar üzerlerine basıldığında DonanımHaber, GitHub ve Ana sayfaya gönderiyor.
+- Eski bize ulaşın tuşu kaldırıldı.

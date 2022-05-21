@@ -10,3 +10,9 @@ Website: https://cidqu.net/ceviri/#/
 - Giriş ekranına yükleme ikonu eklendi.
 - Üç yeni tuş eklendi, bu tuşlar üzerlerine basıldığında DonanımHaber, GitHub ve Ana sayfaya gönderiyor.
 - Eski bize ulaşın tuşu kaldırıldı.
+
+Yeni Sürümde eklenecekler:
+
+- Mobil Arayüz
+- Otomatik Oyun Güncelleme API'ı
+- Yorum Sistemi

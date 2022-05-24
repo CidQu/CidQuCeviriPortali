@@ -11,6 +11,10 @@ Website: https://cidqu.net/ceviri/#/
 - Üç yeni tuş eklendi, bu tuşlar üzerlerine basıldığında DonanımHaber, GitHub ve Ana sayfaya gönderiyor.
 - Eski bize ulaşın tuşu kaldırıldı.
 
+0.8.3 ile eklenenler:
+
+- Attack On Titan 2 indirmeye açıldı.
+
 Yeni Sürümde eklenecekler:
 
 - Mobil Arayüz

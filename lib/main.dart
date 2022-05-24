@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'CidQu BETA',
       theme: _buildShrineTheme(),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.2'),
+      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.3'),
     );
   }
 }
@@ -338,48 +338,17 @@ Splasi (Çevirmen)
                   child: Column(
                     children: [
                       Text(
-                        'Son Durum:',
+                        'Bilinen Sorunlar:',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        '''Oyuna aktarım ve kullanım sırasında hiçbir sorun bulunmamaktadır.''',
+                        '''Oyunu orijinal şekilde oynuyorsanız setup üzerinde dosya konumu seçme yerinde "D:\\SteamLibrary\\steamapps\\common\\AoT2\\Attack on Titan2" yazan konumdaki "\\Attack on Titan2" yerini manuel şekilde kaldırın.''',
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
-                        'Arayüz Yüzdesi:',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        '''
-Ana Menü = %0 (Dosya Bulunamadı)
-Ayarlar = %100
-İnteraktif Tuşlar = %100
-Keşif Defteri = %100
-Killtag'ler = %100
-                          ''',
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        'Oyun İçi Diyaloglar:',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        '''
-Sinematikler = %100
-NPC Diyalogları = %99+
-Ana Hikaye = %90
-Storytelling = %100
-Final Battle = %0
-Tutorials = %1
-                          ''',
-                        textAlign: TextAlign.center,
-                      ),
+
                     ],
                   ),
                 ),
@@ -651,7 +620,7 @@ Tutorials = %1
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
-                                  '30 Mayıs 2022',
+                                  '25 Mayıs 2022',
                                 ),
                               ],
                             ),
@@ -661,7 +630,7 @@ Tutorials = %1
                               children: [
                                 ElevatedButton.icon(
                                     onPressed: () {
-                                      _Indirme('yok');
+                                      _Indirme('https://cidqu.net/ceviri/AOT2_Turkish_1.00.exe');
                                     },
                                     icon: Icon(Icons.download, size: 18),
                                     label: Text(

@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'CidQu BETA',
       theme: _buildShrineTheme(),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.3'),
+      home: const MyHomePage(title: 'CidQu Yama Portalı BETA v0.8.4'),
     );
   }
 }
@@ -257,7 +257,7 @@ Akintos (GitHub) (Dosya Şifre Çözme)
       showDialog<String>(
           context: context,
           builder: (BuildContext context) => AlertDialog(
-                title: Text('Her New Memory'),
+                title: Text('Ready Or Not'),
                 content: Container(
                   height: MediaQuery.of(context).size.height / 6.5,
                   child: Column(
@@ -267,9 +267,8 @@ Akintos (GitHub) (Dosya Şifre Çözme)
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        '''Yavuz Selimhan (CidQu) (Çevirmen, Tester, Proje Lideri)
-InfGo (Çevirmen)
-Splasi (Çevirmen)
+                        '''Yavuz Selimhan (CidQu) (Tool)
+InfGo (Çevirmen, Tester, Yardımcı)
                           ''',
                         textAlign: TextAlign.center,
                       ),
@@ -561,7 +560,7 @@ Splasi (Çevirmen)
                                     backgroundColor:
                                         Color.fromRGBO(209, 250, 229, 1),
                                     label: Text(
-                                      'v0',
+                                      'v0.99',
                                       style: TextStyle(
                                           color: Color.fromRGBO(6, 95, 80, 1)),
                                     ),
@@ -784,7 +783,7 @@ Splasi (Çevirmen)
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Her New Memory Türkçe Yama',
+                                    'Ready Or Not Türkçe Yama',
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold,
@@ -795,9 +794,22 @@ Splasi (Çevirmen)
                                     backgroundColor:
                                         Color.fromRGBO(209, 250, 229, 1),
                                     label: Text(
-                                      'Resmi Yama',
+                                      'v1.0.0',
                                       style: TextStyle(
                                           color: Color.fromRGBO(6, 95, 80, 1)),
+                                    ),
+
+                                    onPressed: () {},
+                                  ),
+                                  SizedBox(width: 10),
+                                  ActionChip(
+                                    backgroundColor:
+                                        Color.fromRGBO(254, 243, 199, 1),
+                                    label: Text(
+                                      '%100',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(209, 155, 86, 1)),
                                     ),
                                     onPressed: () {},
                                   ),           
@@ -831,7 +843,7 @@ Splasi (Çevirmen)
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
-                                  '25 Mart 2022',
+                                  '10 Haziran 2022',
                                 ),
                               ],
                             ),
@@ -841,11 +853,11 @@ Splasi (Çevirmen)
                               children: [
                                 ElevatedButton.icon(
                                     onPressed: () {
-                                      _Indirme('https://store.steampowered.com/app/1296770/Her_New_Memory/');
+                                      _Indirme('https://cidqu.net/ceviri/RON.exe');
                                     },
-                                    icon: Icon(Icons.stream, size: 18),
+                                    icon: Icon(Icons.download, size: 18),
                                     label: Text(
-                                      "Steam",
+                                      "İndir",
                                       style: TextStyle(
                                         fontSize: 15,
                                       ),
